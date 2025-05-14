@@ -1,0 +1,157 @@
+:root{
+    --whiteP: #ffffff;
+    --blackP: #212429;
+
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+header{
+    border-bottom: 1px solid var(--blackP);
+    background-color: var(--whiteP);
+    position: sticky;
+    top: 0;
+}
+
+nav{
+    padding: 0 1rem;
+}
+
+nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ul{
+        display: flex;
+        gap: 3rem;
+    }
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--blackP);
+}
+
+main{
+    padding: 15px;
+}
+
+.collection {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 920px) {
+    .collection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+        #footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        
+        gap: 2rem;
+        font-weight: bold;
+        >li{
+            align-items: center;
+            border-bottom: 1px solid var(--whiteP);
+            padding-bottom: 1rem;
+        }
+    }
+
+    .navbar-menu{
+        justify-content: center;
+    }
+
+    .nav-links,
+    .nav-icons {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .collection {
+        grid-template-columns: 1fr;
+    }
+    h1{text-align: center;}
+}
+
+.collection article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+}
+
+.collection article img{
+    border-radius: 15px;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+
+    div{
+        padding: 0 1rem;
+    }
+}
+
+.prices{
+    font-weight: bold;
+}
+
+footer{
+    padding: 1rem;
+    background-color: var(--blackP);
+    color:var(--whiteP);
+    ul{
+        list-style: none;
+    }
+}
+
+footer>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        >span{
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--whiteP);
+            padding: 0;
+        }
+    }
+}
